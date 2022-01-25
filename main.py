@@ -37,18 +37,21 @@ wb.close()
 category = 50003439
 new_file = 'form_{}.xlsx'
 mode = 'r'          # s 초기화  w 덮어쓰기(새파일 생성후)  r 이어쓰기
-
 flag = 0
+row_count = 0
+
 if mode == 's':
     convert_lklab_to_excel(url_list[0], new_file.format(flag), category, mode)
 else:
     for url in url_list[1:]:
         if convert_lklab_to_excel(url, new_file.format(flag), category, mode):
             print(url+' 스마트 스토어 엑셀로 전환 성공!')
-        else:
+            row_count += 1
+        elif row_count >= 90:
             flag += 1
             convert_lklab_to_excel(url, new_file.format(flag), category, 's')
             convert_lklab_to_excel(url, new_file.format(flag), category, mode)
+            row_count = 0
 
 
 # 웹 호스팅 https://www.pythonanywhere.com/user/principe84/files/home/principe84/

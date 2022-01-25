@@ -377,7 +377,7 @@ def convert_lklab_to_excel(url, new_file, category, mode):
     # product_info_html = product_info_html.replace('td class="trfin"', 'td '+style_context+tableTrTd+__sttablebox_td+__sttablebox_thTd+__sttablebox__trfin+'"')
     # product_info_html = product_info_html.replace('td class="trfin2"', 'td '+style_context+tableTrTd+__sttablebox_td+__sttablebox_thTd+__sttablebox__trfin2+'"')
     # 제목
-    context = context.replace('"http://www.lklab.com/../../images/product/img_substance.png"','"https://www.pythonanywhere.com/user/principe84/files/home/principe84/img_substance.png"')
+    context = context.replace('"http://www.lklab.com/../../images/product/img_substance.png"','"https://raw.githubusercontent.com/yokataaaa/3H_Smartstore/main/image/img_substance.png"')
     context = context.replace('id="prod_info_01"', 'style="width:550px; margin-top:30px;"')
     context = context.replace('class="keyword"', 'style="list-style:none; margin:0; padding:0; color:#666; font-size:9pt; line-height:1.3em; letter-spacing:-0.05em;color:#333; margin-top:15px; margin-bottom:25px; line-height:2.2em;"')
     context = context.replace('id="prod_info_02"', 'style="width:550px; margin-top:35px;"')
